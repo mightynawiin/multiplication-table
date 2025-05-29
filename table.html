@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Multiplication Table Generator</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(120deg, #1f1c2c, #928dab);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 20px;
+      color: #fff;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    input[type="number"] {
+      width: 60%;
+      max-width: 300px;
+      padding: 12px;
+      font-size: 1rem;
+      border: 2px solid #fff;
+      border-radius: 10px;
+      background: transparent;
+      color: #fff;
+      margin-bottom: 15px;
+      outline: none;
+    }
+
+    input::placeholder {
+      color: #ddd;
+    }
+
+    button {
+      background: #f90;
+      color: #000;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-bottom: 20px;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #ffaa00;
+    }
+
+    .table {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 1.2rem;
+    }
+
+    .table p {
+      margin: 4px 0;
+    }
+    .cont{
+      bo
+    }
+
+    @media (max-width: 480px) {
+      input[type="number"] {
+        width: 90%;
+        font-size: 30px;
+      }
+      .table{
+      font-size:2 0px;
+    }
+    button{
+        font-size: 30px;
+        height: 60px;
+        
+    }
+    *{
+        padding: 0;
+        margin:0;
+        box-sizing:border-box;
+     }
+}
+  </style>
+</head>
+<body>
+  <div class="cont">
+  <h1>Multiplication Table</h1>
+  <input type="number" id="numInput" placeholder="Enter a number" />
+  <button onclick="generateTable()">Generate</button>
+  <div class="table" id="tableResult"></div>
+  </div>
+
+  <script>
+    function generateTable() {
+      const num = parseInt(document.getElementById('numInput').value);
+      const outputDiv = document.getElementById('tableResult');
+      if (isNaN(num)) {
+        outputDiv.innerHTML = "<p>Please enter a valid number.</p>";
+        return;
+      }
+
+      let output = "";
+      for (let i = 1; i <= 10; i++) {
+        output += `<p>${num} × ${i} = <strong>${num * i}</strong></p>`;
+      }
+      outputDiv.innerHTML = output;
+    }
+  </script>
+</body>
+</html>
