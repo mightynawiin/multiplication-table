@@ -6,7 +6,7 @@ A simple and interactive Multiplication Table Generator built using HTML, CSS, a
 
 ## 🚀 Live Demo
 
-🔗 [Click here to try it out!](#)  
+🔗 [Click here to try it out!](https://mighty-multiplication-table.vercel.ap)  
 <!-- Replace # with your GitHub Pages link if deployed -->
 
 ---
